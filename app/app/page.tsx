@@ -27,8 +27,13 @@ export default async function AppHomePage() {
 
   return (
     <AppShell>
-      <section className="relative overflow-hidden rounded-[28px] border border-[#f6dfa2]/28 bg-[#fff8e8] text-[#101b36] shadow-[0_30px_120px_rgba(0,0,0,0.32)]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_12%,rgba(240,180,41,0.34),transparent_18rem),radial-gradient(circle_at_92%_42%,rgba(17,167,167,0.18),transparent_20rem),linear-gradient(135deg,rgba(255,248,232,0.96),rgba(234,220,193,0.82))]" />
+      <section className="relative overflow-hidden rounded-[28px] border border-[#f6dfa2]/34 bg-[#fff8e8] text-[#101b36] shadow-[0_34px_130px_rgba(0,0,0,0.38)]">
+        <img
+          alt="Luz de vitral en una iglesia"
+          className="absolute inset-0 h-full w-full object-cover opacity-22"
+          src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624?auto=format&fit=crop&w=1600&q=86"
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_12%,rgba(240,180,41,0.46),transparent_18rem),radial-gradient(circle_at_92%_42%,rgba(17,167,167,0.2),transparent_20rem),linear-gradient(135deg,rgba(255,248,232,0.95),rgba(234,220,193,0.86))]" />
         <div className="relative grid gap-0 lg:grid-cols-[1fr_320px]">
           <div className="p-6 sm:p-10">
             <div className="flex flex-wrap items-start justify-between gap-4">
@@ -51,7 +56,7 @@ export default async function AppHomePage() {
               </form>
             </div>
 
-            <div className="mt-9 rounded-[24px] border border-white/70 bg-white/58 p-5 shadow-[0_18px_60px_rgba(16,27,54,0.12)] backdrop-blur-xl">
+            <div className="mt-9 rounded-[24px] border border-[#d7ad4f]/28 bg-white/78 p-5 shadow-[0_20px_70px_rgba(16,27,54,0.16)] backdrop-blur-xl">
               <h2 className="text-center text-2xl font-semibold">Como te sentis hoy?</h2>
               <div className="mt-6 grid gap-3 sm:grid-cols-5">
                 {moods.map((mood) => (
@@ -59,7 +64,7 @@ export default async function AppHomePage() {
                     className={`rounded-2xl border px-3 py-4 text-center shadow-[0_10px_26px_rgba(16,27,54,0.08)] ${mood.tone}`}
                     key={mood.label}
                   >
-                    <div className="mx-auto h-9 w-9 rounded-full bg-white/78 shadow-inner" />
+                    <div className="mx-auto h-9 w-9 rounded-full border border-white/70 bg-white/86 shadow-inner" />
                     <p className="mt-3 text-sm font-semibold">{mood.label}</p>
                   </div>
                 ))}
@@ -73,7 +78,7 @@ export default async function AppHomePage() {
             </div>
 
             <div className="mt-8 grid gap-4 lg:grid-cols-[1fr_0.82fr]">
-              <div className="rounded-[22px] border border-white/72 bg-white/62 p-6 shadow-[0_18px_56px_rgba(16,27,54,0.12)]">
+              <div className="rounded-[22px] border border-[#101b36]/10 bg-white/82 p-6 shadow-[0_18px_56px_rgba(16,27,54,0.14)]">
                 <p className="text-sm font-semibold text-[#6f8051]">Progreso del camino</p>
                 <h3 className="mt-3 text-2xl font-semibold">Primer tramo iniciado</h3>
                 <div className="mt-5 h-3 overflow-hidden rounded-full bg-[#101b36]/10">
@@ -93,7 +98,7 @@ export default async function AppHomePage() {
                   )}
                 </div>
               </div>
-              <div className="rounded-[22px] border border-white/72 bg-[#d7ad4f]/24 p-6 shadow-[0_18px_56px_rgba(16,27,54,0.12)]">
+              <div className="rounded-[22px] border border-[#d7ad4f]/32 bg-[linear-gradient(135deg,rgba(215,173,79,0.38),rgba(255,255,255,0.7))] p-6 shadow-[0_18px_56px_rgba(16,27,54,0.14)]">
                 <p className="text-sm font-semibold text-[#7f2437]">Estado actual</p>
                 <h3 className="mt-3 text-3xl font-semibold">{emotionalState}</h3>
                 <p className="mt-4 text-sm leading-6 text-[#101b36]/64">
@@ -103,8 +108,8 @@ export default async function AppHomePage() {
             </div>
           </div>
 
-          <aside className="border-t border-[#101b36]/8 bg-white/40 p-6 backdrop-blur-xl lg:border-l lg:border-t-0">
-            <div className="rounded-[24px] border border-[#d7ad4f]/24 bg-[linear-gradient(135deg,rgba(215,173,79,0.44),rgba(255,248,232,0.7))] p-6 shadow-[0_20px_60px_rgba(215,173,79,0.22)]">
+          <aside className="border-t border-[#101b36]/8 bg-[#101b36]/8 p-6 backdrop-blur-xl lg:border-l lg:border-t-0">
+            <div className="rounded-[24px] border border-[#d7ad4f]/36 bg-[linear-gradient(135deg,rgba(215,173,79,0.62),rgba(255,248,232,0.82))] p-6 shadow-[0_24px_70px_rgba(215,173,79,0.28)]">
               <Badge>Reflexion diaria</Badge>
               <h2 className="serif-display mt-5 text-3xl leading-tight">
                 La paz tambien se practica de a poco.
@@ -117,12 +122,12 @@ export default async function AppHomePage() {
               </LinkButton>
             </div>
 
-            <div className="mt-6 rounded-[22px] border border-white/70 bg-white/60 p-5 shadow-[0_16px_42px_rgba(16,27,54,0.1)]">
+            <div className="mt-6 rounded-[22px] border border-[#101b36]/10 bg-white/74 p-5 shadow-[0_16px_42px_rgba(16,27,54,0.12)]">
               <p className="text-sm font-semibold text-[#101b36]/60">Accesos rapidos</p>
               <div className="mt-4 grid gap-2">
                 {quickLinks.map((item) => (
                   <a
-                    className="rounded-md px-3 py-2 text-sm font-semibold text-[#101b36]/72 transition hover:bg-[#101b36]/6"
+                    className="rounded-md border border-transparent px-3 py-2 text-sm font-semibold text-[#101b36]/72 transition hover:border-[#d7ad4f]/32 hover:bg-[#d7ad4f]/16 hover:text-[#101b36]"
                     href={item.href}
                     key={item.href}
                   >
@@ -143,8 +148,8 @@ function BigAction({ href, label, tone }: { href: string; label: string; tone: "
     <a
       className={
         tone === "gold"
-          ? "rounded-[22px] bg-[#d7ad4f] px-5 py-7 text-center text-lg font-semibold text-[#101b36] shadow-[0_18px_48px_rgba(215,173,79,0.28)] transition hover:-translate-y-0.5"
-          : "rounded-[22px] bg-[#1556b7] px-5 py-7 text-center text-lg font-semibold text-white shadow-[0_18px_48px_rgba(21,86,183,0.24)] transition hover:-translate-y-0.5"
+          ? "rounded-[22px] bg-[linear-gradient(135deg,#f6dfa2,#d7ad4f)] px-5 py-7 text-center text-lg font-semibold text-[#101b36] shadow-[0_20px_54px_rgba(215,173,79,0.34)] transition hover:-translate-y-0.5 hover:shadow-[0_24px_70px_rgba(215,173,79,0.42)]"
+          : "rounded-[22px] bg-[linear-gradient(135deg,#1556b7,#0c2147)] px-5 py-7 text-center text-lg font-semibold text-white shadow-[0_20px_54px_rgba(21,86,183,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_24px_70px_rgba(21,86,183,0.4)]"
       }
       href={href}
     >

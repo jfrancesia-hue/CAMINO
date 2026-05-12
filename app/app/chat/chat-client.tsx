@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import { Badge, Button, Card } from "@/components";
+import { Badge, Button } from "@/components";
 import { caminoModes, type CaminoModeId } from "@/lib/ai/modes";
 
 type ChatMessage = {
@@ -11,6 +11,16 @@ type ChatMessage = {
 
 type ChatClientProps = {
   initialMode: CaminoModeId;
+};
+
+const modeMarks: Record<CaminoModeId, string> = {
+  paz: "I",
+  fe: "II",
+  proposito: "III",
+  relaciones: "IV",
+  noche: "V",
+  descargo: "VI",
+  gratitud: "VII",
 };
 
 export function ChatClient({ initialMode }: ChatClientProps) {
@@ -89,77 +99,110 @@ export function ChatClient({ initialMode }: ChatClientProps) {
   }
 
   return (
-    <div className="mt-10 grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-      <Card>
-        <Badge tone="olive">Modo</Badge>
-        <h2 className="mt-4 text-2xl font-semibold">{selectedMode.label}</h2>
-        <p className="mt-3 text-sm leading-6 text-white/64">{selectedMode.guidance}</p>
-        <div className="mt-6 grid gap-2">
-          {caminoModes.map((item) => (
-            <button
-              className={
-                item.id === mode
-                  ? "rounded-md border border-[#d9b45f]/50 bg-[#d9b45f]/18 px-4 py-3 text-left text-sm font-semibold text-[#f4dfaa]"
-                  : "rounded-md border border-white/10 bg-white/[0.055] px-4 py-3 text-left text-sm text-white/70 transition hover:bg-white/[0.09]"
-              }
-              key={item.id}
-              onClick={() => setMode(item.id)}
-              type="button"
-            >
-              {item.label}
-            </button>
-          ))}
+    <div className="mt-8 grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
+      <aside className="relative overflow-hidden rounded-[28px] border border-[#f6dfa2]/20 bg-[#fff8e8]/92 p-5 text-[#101b36] shadow-[0_26px_90px_rgba(0,0,0,0.28)]">
+        <div className="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,#7f2437,#d7ad4f,#11a7a7,#0c2147)]" />
+        <div className="absolute right-[-6rem] top-12 h-56 w-56 rounded-full bg-[#d7ad4f]/22 blur-3xl" />
+        <div className="relative">
+          <Badge tone="olive">Modo espiritual</Badge>
+          <h2 className="serif-display mt-4 text-4xl leading-tight">{selectedMode.label}</h2>
+          <p className="mt-3 text-sm leading-6 text-[#101b36]/66">{selectedMode.guidance}</p>
+          <div className="mt-6 grid gap-2">
+            {caminoModes.map((item) => (
+              <button
+                className={
+                  item.id === mode
+                    ? "group flex items-center gap-3 rounded-2xl border border-[#d7ad4f]/70 bg-[#0c2147] px-3 py-3 text-left text-sm font-semibold text-[#f6dfa2] shadow-[0_18px_42px_rgba(12,33,71,0.24)]"
+                    : "group flex items-center gap-3 rounded-2xl border border-[#d7ad4f]/18 bg-white/58 px-3 py-3 text-left text-sm font-semibold text-[#101b36]/70 transition hover:border-[#d7ad4f]/52 hover:bg-[#f6dfa2]/42 hover:text-[#101b36]"
+                }
+                key={item.id}
+                onClick={() => setMode(item.id)}
+                type="button"
+              >
+                <span
+                  className={
+                    item.id === mode
+                      ? "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#d7ad4f] text-xs font-black text-[#101b36]"
+                      : "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#d7ad4f]/34 bg-[#fff8e8] text-xs font-black text-[#7f2437]"
+                  }
+                >
+                  {modeMarks[item.id]}
+                </span>
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </div>
         </div>
-      </Card>
+      </aside>
 
-      <Card className="grid min-h-[640px] grid-rows-[1fr_auto] gap-5">
-        <div className="space-y-4 overflow-y-auto pr-1">
-          {messages.map((message, index) => (
-            <div
-              className={
-                message.role === "user"
-                  ? "ml-auto max-w-[85%] rounded-lg bg-[#d9b45f] px-4 py-3 text-sm leading-6 text-[#111827]"
-                  : "mr-auto max-w-[88%] rounded-lg border border-white/10 bg-white/[0.07] px-4 py-3 text-sm leading-6 text-white/78"
-              }
-              key={`${message.role}-${index}`}
-            >
-              {message.content}
+      <section className="relative grid min-h-[680px] overflow-hidden rounded-[28px] border border-[#f6dfa2]/22 bg-[#070d1c] shadow-[0_30px_100px_rgba(0,0,0,0.34)]">
+        <img
+          alt="Interior calido de iglesia"
+          className="absolute inset-0 h-full w-full object-cover opacity-[0.18]"
+          src="https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?auto=format&fit=crop&w=1600&q=88"
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_18%,rgba(215,173,79,0.22),transparent_18rem),radial-gradient(circle_at_82%_34%,rgba(17,167,167,0.18),transparent_20rem),linear-gradient(180deg,rgba(7,13,28,0.72),rgba(7,13,28,0.96))]" />
+        <div className="relative grid min-h-[680px] grid-rows-[auto_1fr_auto]">
+          <div className="border-b border-[#f6dfa2]/16 px-5 py-4 sm:px-6">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#f6dfa2]/70">Acompanamiento</p>
+                <h2 className="serif-display mt-1 text-3xl text-[#fff8e8]">Camino escucha</h2>
+              </div>
+              <span className="rounded-full border border-[#d7ad4f]/38 bg-[#d7ad4f]/16 px-4 py-2 text-xs font-semibold text-[#f6dfa2]">
+                {selectedMode.label}
+              </span>
             </div>
-          ))}
-          {isSending ? (
-            <div className="mr-auto max-w-[88%] rounded-lg border border-white/10 bg-white/[0.07] px-4 py-3 text-sm text-white/60">
-              Camino esta respondiendo...
-            </div>
-          ) : null}
-        </div>
+          </div>
 
-        <div>
-          {showCrisisHelp ? (
-            <a
-              className="mb-4 block rounded-md border border-[#ef7979]/35 bg-[#ef7979]/15 px-4 py-3 text-center text-sm font-semibold text-[#ffd7d7]"
-              href="tel:911"
-            >
-              Necesito ayuda ahora
-            </a>
-          ) : null}
-          {error ? (
-            <div className="mb-4 rounded-md border border-[#ef7979]/35 bg-[#ef7979]/14 px-4 py-3 text-sm text-[#ffd7d7]">
-              {error}
-            </div>
-          ) : null}
-          <form className="grid gap-3" onSubmit={handleSubmit}>
-            <textarea
-              className="min-h-28 resize-none rounded-md border border-white/14 bg-white/9 px-4 py-3 text-sm text-[#fffaf0] outline-none transition placeholder:text-white/38 focus:border-[#d9b45f]/70 focus:ring-2 focus:ring-[#d9b45f]/20"
-              onChange={(event) => setContent(event.target.value)}
-              placeholder="Escribi lo que estas sintiendo..."
-              value={content}
-            />
-            <Button disabled={isSending} type="submit">
-              Enviar
-            </Button>
-          </form>
+          <div className="space-y-4 overflow-y-auto px-5 py-6 sm:px-6">
+            {messages.map((message, index) => (
+              <div
+                className={
+                  message.role === "user"
+                    ? "ml-auto max-w-[85%] rounded-[22px] rounded-br-md bg-[#d7ad4f] px-5 py-4 text-sm leading-6 text-[#101b36] shadow-[0_16px_44px_rgba(215,173,79,0.18)]"
+                    : "mr-auto max-w-[88%] rounded-[22px] rounded-bl-md border border-[#f6dfa2]/18 bg-[#fff8e8]/10 px-5 py-4 text-sm leading-6 text-[#fff8e8]/82 backdrop-blur-md"
+                }
+                key={`${message.role}-${index}`}
+              >
+                {message.content}
+              </div>
+            ))}
+            {isSending ? (
+              <div className="mr-auto max-w-[88%] rounded-[22px] rounded-bl-md border border-[#f6dfa2]/18 bg-[#fff8e8]/10 px-5 py-4 text-sm text-[#fff8e8]/62 backdrop-blur-md">
+                Camino esta respondiendo...
+              </div>
+            ) : null}
+          </div>
+
+          <div className="border-t border-[#f6dfa2]/16 bg-[#070d1c]/76 px-5 py-5 backdrop-blur-xl sm:px-6">
+            {showCrisisHelp ? (
+              <a
+                className="mb-4 block rounded-2xl border border-[#ef7979]/42 bg-[#ef7979]/18 px-4 py-3 text-center text-sm font-semibold text-[#ffd7d7]"
+                href="tel:911"
+              >
+                Necesito ayuda ahora
+              </a>
+            ) : null}
+            {error ? (
+              <div className="mb-4 rounded-2xl border border-[#ef7979]/35 bg-[#ef7979]/14 px-4 py-3 text-sm text-[#ffd7d7]">
+                {error}
+              </div>
+            ) : null}
+            <form className="grid gap-3" onSubmit={handleSubmit}>
+              <textarea
+                className="min-h-28 resize-none rounded-2xl border border-[#f6dfa2]/22 bg-[#fff8e8] px-4 py-3 text-sm leading-6 text-[#101b36] outline-none transition placeholder:text-[#101b36]/42 focus:border-[#d7ad4f] focus:ring-2 focus:ring-[#d7ad4f]/28"
+                onChange={(event) => setContent(event.target.value)}
+                placeholder="Escribi lo que estas sintiendo..."
+                value={content}
+              />
+              <Button disabled={isSending} type="submit">
+                Enviar mensaje
+              </Button>
+            </form>
+          </div>
         </div>
-      </Card>
+      </section>
     </div>
   );
 }

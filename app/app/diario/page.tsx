@@ -90,11 +90,15 @@ export default async function JournalPage({ searchParams }: JournalPageProps) {
               </a>
             ))}
             {!loadError && entries.length === 0 ? (
-              <Card>
-                <Badge tone="neutral">Sin entradas</Badge>
-                <p className="mt-5 text-sm leading-6 text-white/68">
-                  Todavia no escribiste en tu diario. Empeza con una frase honesta y pequena.
-                </p>
+              <Card className="overflow-hidden border-[#d7ad4f]/24 bg-[#fff8e8]/92 p-0 text-[#101b36]">
+                <div className="h-2 bg-[linear-gradient(90deg,#7f2437,#d7ad4f,#11a7a7)]" />
+                <div className="p-6">
+                  <Badge tone="neutral">Sin entradas</Badge>
+                  <h2 className="serif-display mt-4 text-3xl">Tu cuaderno esta abierto.</h2>
+                  <p className="mt-3 text-sm leading-6 text-[#101b36]/64">
+                    Empeza con una frase honesta y pequena. A veces una linea alcanza para volver a respirar.
+                  </p>
+                </div>
               </Card>
             ) : null}
           </div>
