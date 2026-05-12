@@ -1,6 +1,6 @@
 # Marca Camino
 
-Camino es un santuario digital cristiano, moderno y emocional. La marca debe sentirse serena, premium, contemplativa y humana, sin caer en estetica religiosa antigua, infantil o fanatica.
+Camino es un santuario digital catolico, moderno y emocional. La marca debe sentirse como una **catedral espanola viva** llevada a una experiencia digital: luz de vitral, cruz clara, belleza premium, contencion humana y tecnologia al servicio de la fe.
 
 ## Esencia
 
@@ -16,65 +16,105 @@ Camino es un santuario digital cristiano, moderno y emocional. La marca debe sen
 
 - Calida
 - Serena
-- Humilde
 - Esperanzadora
+- Catolica
 - Moderna
+- Bella
+- Humilde
 - Cuidadosa
-- Sin dramatismo
 - Sin culpa
-- Sin grandilocuencia religiosa
+- Sin manipulacion
+- Sin estetica religiosa vieja
+
+## Direccion Visual
+
+Camino debe evocar:
+
+- Catedrales espanolas
+- Vitrales vivos
+- Luz dorada
+- Arcos organicos
+- Mosaicos
+- Velas
+- Biblia
+- Senderos
+- Comunidad real
+
+Debe evitar:
+
+- SaaS generico
+- Dashboard frio
+- Cards vacias
+- Iconos religiosos ambiguos
+- Fotos abstractas sin fe visible
+- Estetica infantil
+- Fanatismo visual
 
 ## Logo
 
-Direccion recomendada:
+La direccion actual es una **cruz clara y reconocible** dentro de un medallon luminoso.
 
-- Minimalista
-- Simbolo de camino, horizonte o luz suave
-- Sin cruces gigantes
-- Sin iconografia pesada
-- Debe funcionar en app, favicon, redes y marca blanca futura para comunidades
+Reglas:
 
-El isotipo inicial puede ser una linea curva dentro de un circulo, evocando sendero, amanecer y acompanamiento.
+- Debe entenderse en 1 segundo.
+- Debe funcionar pequeno en nav y grande en marca.
+- Puede tener oro y marfil como luz.
+- No debe parecer un icono vacio ni un simbolo abstracto dificil de leer.
 
 ## Paleta
 
 | Token | Uso | Color |
 | --- | --- | --- |
-| Azul noche | Fondo principal, profundidad | `#08111f` |
-| Azul santuario | Superficies oscuras | `#102038` |
-| Dorado calido | CTA, luz, acentos | `#d9b45f` |
-| Dorado suave | Hover, detalles | `#f4dfaa` |
-| Verde oliva | Naturaleza, calma | `#7b8f62` |
-| Salvia | Estados suaves | `#c7d2b0` |
-| Blanco calido | Texto principal | `#fffaf0` |
-| Arena | Fondos claros futuros | `#e8dbc2` |
-| Cielo suave | Informacion, aire | `#9fc9d9` |
-| Coral cuidado | Alertas humanas | `#ef7979` |
+| Azul noche mariano | Fondo principal, profundidad espiritual | `#070d1c` |
+| Azul catedral | Superficies oscuras y hero | `#0c2147` |
+| Azul mariano | Identidad, confianza | `#14366f` |
+| Cobalto espanol | Vitral vivo, impacto | `#1556b7` |
+| Turquesa sagrado | Aire, alivio, mosaico | `#11a7a7` |
+| Bermellon vitral | Calor, emocion, contraste | `#d94a35` |
+| Azafran luz | Sol, celebracion, highlight | `#f0b429` |
+| Oro liturgico | CTA, foco, esperanza | `#d7ad4f` |
+| Oro vela | Brillos, cruz, hover | `#f6dfa2` |
+| Marfil calido | Texto principal y calma | `#fff8e8` |
+| Pergamino | Secciones editoriales | `#eadcc1` |
+| Vino sacramental | Profundidad emocional | `#7f2437` |
+| Oliva quieto | Naturaleza y crecimiento | `#6f8051` |
 
 ## Tipografia
 
-Inicialmente se usa sans serif del sistema para velocidad y estabilidad. Para la landing premium se recomienda evaluar:
+- Titulares grandes: serif editorial del sistema (`Georgia`, `Times New Roman`, serif).
+- UI y formularios: sans serif del sistema.
+- Badges: pequenos, en mayusculas, con tracking amplio.
 
-- Serif editorial suave para titulares: `Cormorant Garamond`, `Lora` o similar.
-- Sans moderna para UI: `Inter`, `Geist` o similar.
+## Imagenes
 
-La regla visual es claridad antes que ornamento.
+Las imagenes son obligatorias en pantallas publicas y emocionales.
 
-## Estilo Visual
+Usar:
 
-- Fondos azul noche con luz dorada sutil
-- Amanecer, senderos, naturaleza y silencio visual
-- Glassmorphism delicado
-- Cards con radio moderado y sombras elegantes
-- Mucho aire
-- Transiciones sutiles
-- Copy breve, humano y directo
+- Catedral real
+- Vitral real
+- Cruz visible
+- Velas
+- Biblia
+- Piedra, mosaico, arquitectura
+- Senderos
+- Comunidad humana
 
 Evitar:
 
-- Dashboards frios
-- Plantillas SaaS genericas
-- Iconografia religiosa pesada
-- Exceso de beige
-- Exceso de gradientes morados o azules brillantes
-- Frases que suenen a sermon o manipulacion
+- Fondos abstractos como unico recurso
+- Fotos oscuras sin lectura clara
+- Banco de imagenes corporativo
+- Ilustraciones religiosas infantiles
+
+## Tono Verbal
+
+Frases guia:
+
+- No estas solo.
+- Podemos caminar esto juntos.
+- No necesitas tener todo resuelto hoy.
+- Tu vida tiene valor.
+- La fe tambien puede volver de a poco.
+
+El tono nunca debe sonar a sermon, culpa o promesa de curacion.

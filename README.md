@@ -72,6 +72,7 @@ La Fase 2 construira la landing publica premium. Las fases de Supabase, autentic
 Antes de ampliar modulos, Camino prioriza identidad, foco emocional y MVP real. Ver:
 
 - `docs/BRAND.md`
+- `docs/DESIGN.md`
 - `docs/AI_BEHAVIOR.md`
 - `docs/PRODUCT.md`
 - `docs/ETHICS.md`

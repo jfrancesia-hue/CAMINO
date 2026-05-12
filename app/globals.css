@@ -1,17 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #08111f;
-  --foreground: #fffaf0;
-  --night: #08111f;
-  --night-soft: #102038;
-  --gold: #d9b45f;
-  --gold-soft: #f4dfaa;
-  --olive: #7b8f62;
+  --background: #070d1c;
+  --foreground: #fff8e8;
+  --night: #070d1c;
+  --night-soft: #101b36;
+  --marian-blue: #14366f;
+  --cathedral-blue: #0c2147;
+  --spanish-cobalt: #1556b7;
+  --vermilion: #d94a35;
+  --turquoise: #11a7a7;
+  --saffron: #f0b429;
+  --gold: #d7ad4f;
+  --gold-soft: #f6dfa2;
+  --ivory: #fff8e8;
+  --parchment: #eadcc1;
+  --wine: #7f2437;
+  --rose: #c9867a;
+  --olive: #6f8051;
   --sage: #c7d2b0;
-  --warm-white: #fffaf0;
-  --sand: #e8dbc2;
-  --rose: #d8a7a0;
   --sky: #9fc9d9;
   --danger: #ef7979;
 }
@@ -35,9 +42,10 @@ body {
   min-height: 100%;
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(217, 180, 95, 0.22), transparent 28rem),
-    radial-gradient(circle at 80% 10%, rgba(159, 201, 217, 0.16), transparent 24rem),
-    linear-gradient(160deg, #08111f 0%, #102038 48%, #1f2a20 100%);
+    radial-gradient(circle at top left, rgba(240, 180, 41, 0.28), transparent 28rem),
+    radial-gradient(circle at 70% 6%, rgba(17, 167, 167, 0.24), transparent 26rem),
+    radial-gradient(circle at 92% 28%, rgba(217, 74, 53, 0.22), transparent 22rem),
+    linear-gradient(160deg, #070d1c 0%, #0c2147 42%, #2b1026 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -63,4 +71,119 @@ textarea {
     linear-gradient(rgba(255, 250, 240, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 250, 240, 0.05) 1px, transparent 1px);
   background-size: 44px 44px;
+}
+
+.cathedral-hero {
+  background-image:
+    linear-gradient(180deg, rgba(7, 13, 28, 0.1), #070d1c 94%),
+    linear-gradient(90deg, rgba(7, 13, 28, 0.94), rgba(12, 33, 71, 0.48) 52%, rgba(7, 13, 28, 0.72)),
+    url("https://images.unsplash.com/photo-1520215066810-2ea03aef78b2?auto=format&fit=crop&w=1900&q=88");
+  background-position: center;
+  background-size: cover;
+}
+
+.cathedral-veil {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(240, 180, 41, 0.28), transparent 18rem),
+    radial-gradient(circle at 72% 18%, rgba(17, 167, 167, 0.26), transparent 18rem),
+    radial-gradient(circle at 86% 44%, rgba(217, 74, 53, 0.22), transparent 18rem),
+    linear-gradient(120deg, rgba(20, 54, 111, 0.18), rgba(7, 13, 28, 0));
+}
+
+.stained-glass {
+  background:
+    linear-gradient(135deg, rgba(240, 180, 41, 0.76), transparent 32%),
+    linear-gradient(45deg, rgba(21, 86, 183, 0.86), transparent 34%),
+    linear-gradient(225deg, rgba(217, 74, 53, 0.8), transparent 36%),
+    linear-gradient(315deg, rgba(17, 167, 167, 0.72), transparent 40%),
+    radial-gradient(circle at 50% 12%, rgba(255, 248, 232, 0.42), transparent 11rem),
+    #0c2147;
+}
+
+.stained-glass-lines {
+  background-image:
+    linear-gradient(90deg, rgba(255, 248, 232, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(255, 248, 232, 0.13) 1px, transparent 1px),
+    linear-gradient(45deg, transparent 48%, rgba(255, 248, 232, 0.2) 49%, rgba(255, 248, 232, 0.2) 51%, transparent 52%),
+    linear-gradient(135deg, transparent 48%, rgba(255, 248, 232, 0.15) 49%, rgba(255, 248, 232, 0.15) 51%, transparent 52%);
+  background-size: 64px 64px, 64px 64px, 128px 128px, 128px 128px;
+}
+
+.arch-window {
+  border-radius: 999px 999px 18px 18px;
+}
+
+.cross-glow {
+  filter: drop-shadow(0 0 18px rgba(246, 223, 162, 0.5));
+}
+
+.cathedral-card {
+  position: relative;
+}
+
+.cathedral-card::before {
+  background: linear-gradient(90deg, transparent, rgba(246, 223, 162, 0.64), transparent);
+  content: "";
+  height: 1px;
+  left: 18px;
+  position: absolute;
+  right: 18px;
+  top: 0;
+}
+
+.sacred-band {
+  background:
+    linear-gradient(180deg, rgba(255, 248, 232, 0.94), rgba(234, 220, 193, 0.96)),
+    radial-gradient(circle at 20% 15%, rgba(215, 173, 79, 0.24), transparent 22rem);
+}
+
+.serif-display {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.sacred-photo {
+  position: relative;
+}
+
+.sacred-photo::after {
+  background:
+    linear-gradient(180deg, rgba(255, 248, 232, 0.16), transparent 22%),
+    linear-gradient(180deg, transparent, rgba(7, 13, 28, 0.78));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.gold-line {
+  background: linear-gradient(90deg, transparent, rgba(246, 223, 162, 0.9), transparent);
+  height: 1px;
+}
+
+.rose-window {
+  background:
+    conic-gradient(from 0deg, #d7ad4f, #14366f, #7f2437, #6f8051, #f6dfa2, #14366f, #d7ad4f);
+  border-radius: 999px;
+  box-shadow: 0 0 50px rgba(215, 173, 79, 0.24);
+  mask-image: radial-gradient(circle, transparent 0 14%, #000 15% 100%);
+}
+
+.spanish-glass-bg {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(240, 180, 41, 0.36), transparent 18rem),
+    radial-gradient(circle at 78% 22%, rgba(17, 167, 167, 0.28), transparent 18rem),
+    radial-gradient(circle at 88% 72%, rgba(217, 74, 53, 0.28), transparent 20rem),
+    linear-gradient(140deg, rgba(21, 86, 183, 0.32), rgba(7, 13, 28, 0.96));
+}
+
+.mosaic-panel {
+  background:
+    linear-gradient(135deg, rgba(240, 180, 41, 0.24) 0 18%, transparent 18% 100%),
+    linear-gradient(45deg, rgba(17, 167, 167, 0.2) 0 20%, transparent 20% 100%),
+    linear-gradient(225deg, rgba(217, 74, 53, 0.18) 0 18%, transparent 18% 100%),
+    rgba(255, 255, 255, 0.07);
+}
+
+.organic-arch {
+  border-radius: 42% 58% 18px 18px / 34% 46% 18px 18px;
 }
